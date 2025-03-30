@@ -16,6 +16,14 @@ int reverse(int x)
 
 int main(int argc, char* argv[])
 {
-    cout << reverse(512);
+    if(argc >= 2)
+        cout << reverse(atoi(argv[1]));
+    else
+    {
+        cout << "Enter a number" << endl;
+        int x;
+        cin >> x;
+        cout << reverse(x) << endl;
+    }
     return 0;
 }
